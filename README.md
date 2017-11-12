@@ -86,6 +86,27 @@ Yes.
 
 Yes.
 
+**If I re-name the AppImage, will it still work?**
+
+Yes.
+
+**If I remove the ugly .AppImage suffix, will it still work?**
+
+Yes.
+
+**If I create a symlink to the AppImage, will it work?**
+
+Yes.
+
+**How do I prevent the AppImage from changing settings in my standard/system-installed LibreOffice instance?**
+
+The following works for ALL AppImages, even non-LibreOffice ones:
+
+1. Go into the directory where the AppImage is stored.
+1. Right next the AppImage file, create an empty directory, with exactly the same name PLUS the *`.home`* extension.
+1. The next startup of the AppImage will write any settings it wants to remember (for example, if you change the UI language or the *locale*) into *LibreOffice-XYZabc123-X86-64.AppImage.home*.
+1. If you do not like the looooong, weird name of your AppImage, you can also rename it to just *LO.ai* or *LO* even. Just don't forget to adapt the new *\*.home* directory likewise!
+
 **How do I get rid of the AppImage again, should I no longer want it?**
 
 Just delete the one AppImage file.
